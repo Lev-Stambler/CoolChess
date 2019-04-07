@@ -18,6 +18,14 @@
       width: 100%;
     }
 
+    .subtable {
+      width: 100%;
+    }
+
+    .pawn.p2 {
+      transform: rotate(180deg)
+    }
+
     table {
       display: inline-block;
       border: 1px solid black;
@@ -100,7 +108,7 @@
         <tr>
           <td class="4"></td>
           <td class="5">
-            <div class="piece pawn p2" index="3" mult="1"><img src="pawn2.JPG" alt=""></div>
+            <div class="piece pawn p2" index="3" mult="1"><img src="pawn.JPG" alt=""></div>
           </td>
           <td class="6"></td>
         </tr>
@@ -134,7 +142,7 @@
             Player 1 Possession
           </div>
           <div class="row">
-            <table>
+            <table class="subtable">
               <tr>
 
               </tr>
@@ -148,7 +156,7 @@
             Player 2 Possession
           </div>
           <div class="row">
-            <table>
+            <table class="subtable">
               <tr>
 
               </tr>
