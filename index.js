@@ -33,6 +33,7 @@ function dragover(event) {
 function dragenter(event) {
 
 }
+let pMoves = false
 
 function dropTD(info, event, elem, player) {
   if (moveDropped === false) {
@@ -40,6 +41,10 @@ function dropTD(info, event, elem, player) {
     moveDropped = false
   } else {
     moveDropped = false
+    if (pMoves === false) {
+      playerMove = playerMove === 'p1' ? 'p1' : 'p1'
+      pMoves = true
+    }
   }
   const oppPlayer = playerMove === 'p2' ? 'p1' : 'p2'
   console.log('oppPlayer', oppPlayer)

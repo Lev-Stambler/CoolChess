@@ -26,6 +26,10 @@
       transform: rotate(180deg)
     }
 
+    .pawn.p1 {
+      transform: rotate(0deg)
+    }
+
     table {
       display: inline-block;
       border: 1px solid black;
@@ -40,6 +44,7 @@
       max-height: 167px;
       height: 167px;
       min-width: 167px;
+      transition: all 100ms ease-in-out;
     }
 
     tr {
@@ -91,76 +96,77 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row justify-content-center">
-      <table class="square" border="1" width="500">
-        <tr>
-          <td class="1">
-            <div class="piece rook p2" index="2"><img src="rookarrow.JPG" alt=""></div>
-          </td>
-          <td class="2">
-            <div class="piece king p2" index="1"><img src="king.JPG" alt=""></div>
-          </td>
-          <td class="3">
-            <div class="piece diagonal p2" index="0"><img src="diagonal.JPG" alt=""></div>
-          </td>
-        </tr>
-        <tr>
-          <td class="4"></td>
-          <td class="5">
-            <div class="piece pawn p2" index="3" mult="1"><img src="pawn.JPG" alt=""></div>
-          </td>
-          <td class="6"></td>
-        </tr>
-        <tr>
-          <td class="7"></td>
-          <td class="8">
-            <div class="piece p1 pawn" index="3" mult="-1"><img src="pawn.JPG" alt=""></div>
-          </td>
-          <td class="9"></td>
-        </tr>
-        <tr>
-          <td class="a">
-            <div class="piece p1 diagonal" index="0"><img src="diagonal.JPG" alt=""></div>
-          </td>
-          <td class="b">
-            <div class="piece p1 king" index="1"><img src="king.JPG" alt=""></div>
-          </td>
-          <td class="c">
-            <div class="piece p1 rook" index="2"><img src="rookarrow.JPG" alt=""></div>
-          </td>
-        </tr>
-      </table>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row justify-content-center">
+        <table class="square" border="1" width="500">
+          <tr>
+            <td class="1">
+              <div class="piece rook p2" index="2"><img src="rookarrow.JPG" alt=""></div>
+            </td>
+            <td class="2">
+              <div class="piece king p2" index="1"><img src="king.JPG" alt=""></div>
+            </td>
+            <td class="3">
+              <div class="piece diagonal p2" index="0"><img src="diagonal.JPG" alt=""></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="4"></td>
+            <td class="5">
+              <div class="piece pawn p2" index="3" mult="1"><img src="pawn.JPG" alt=""></div>
+            </td>
+            <td class="6"></td>
+          </tr>
+          <tr>
+            <td class="7"></td>
+            <td class="8">
+              <div class="piece p1 pawn" index="3" mult="-1"><img src="pawn.JPG" alt=""></div>
+            </td>
+            <td class="9"></td>
+          </tr>
+          <tr>
+            <td class="a">
+              <div class="piece p1 diagonal" index="0"><img src="diagonal.JPG" alt=""></div>
+            </td>
+            <td class="b">
+              <div class="piece p1 king" index="1"><img src="king.JPG" alt=""></div>
+            </td>
+            <td class="c">
+              <div class="piece p1 rook" index="2"><img src="rookarrow.JPG" alt=""></div>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </div>
-  <br />
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <div class='player1Pos'>
-          <div class="row">
-            Player 1 Possession
-          </div>
-          <div class="row">
-            <table class="subtable">
-              <tr>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-6">
+          <div class='player1Pos'>
+            <div class="row text-center justify-content-center" style="margin-top: 1rem;">
+              Player 1 Possession
+            </div>
+            <div class="row">
+              <table class="subtable">
+                <tr>
 
-              </tr>
-            </table>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-6">
-        <div class='player2Pos'>
-          <div class="row">
-            Player 2 Possession
-          </div>
-          <div class="row">
-            <table class="subtable">
-              <tr>
+        <div class="col-sm-6">
+          <div class='player2Pos'>
+            <div class="row text-center justify-content-center" style="margin-top: 1rem;">
+              Player 2 Possession
+            </div>
+            <div class="row">
+              <table class="subtable">
+                <tr>
 
-              </tr>
-            </table>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
