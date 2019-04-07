@@ -117,8 +117,8 @@
       bottom: 0;
       height: 100vh;
       background: rgb(187, 187, 187);
-      background: url('hackathon-it-would.jpg'); 
-      background-size: contain; 
+      background: url('hackathon-it-would.jpg');
+      background-size: contain;
       background-position: center center;
       width: 100%;
       z-index: 100000;
@@ -136,151 +136,172 @@
       align-items: center;
       display: none;
     }
+
     h1 {
       border-radius: 0.8rem;
       background: honeydew;
       padding: 1.3rem;
       padding-top: 1rem;
     }
+
     img {
       animation-name: spin;
       animation-duration: 500ms;
-      animation-direction: forward; 
+      animation-direction: forward;
     }
-    @keyframes spin{
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+
+    .jumbotron {
+      margin: 3rem;
+    }
+
+    .para {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      line-height: 1.2rem;
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
+      margin: 1rem;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
   </style>
 </head>
 
 <body>
-    Objective: Capture the opponent's king
-    <br/>
-    Pieces:
-    King-Moves in all directions
-    <br/>
-    Rook-Moves up, left, right, down
-    <br/>
-    Diagonal-Moves in diagonals
-    <br/>
-    Pawn-Moves forward
-    <br/>
-    Rules:
-    Each move is 1 tile
-    <br/>
-    When you capture a piece, it becomes your possession. You can place the piece anywhere within your 3 by 3 area as a turn.
-    
+  <div class="jumbotron">
+    <div class="para">
+      <h2 class="text-center">
+        Janky arrow dot com
+      </h2>
+      Objective: Capture the opponent's king
+      <br />
+      Pieces:
+      King-Moves in all directions
+      <br />
+      Rook-Moves up, left, right, down
+      <br />
+      Diagonal-Moves in diagonals
+      <br />
+      Pawn-Moves forward
+      <br />
+      Rules:
+      Each move is 1 tile
+      <br />
+      When you capture a piece, it becomes your possession. You can place the piece anywhere within your 3 by 3 area as
+      a
+      turn.
+    </div>
+  </div>
   <div class="row">
-    <div class="col-sm-6">
-  <h2 class="text-center">
-    How do we register for this domain thing?
-  </h2>
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-5">
+    <div class="col-sm-12">
       <div class="row justify-content-center">
-        <table class="square main" border="1" width="500">
-          <tr>
-            <td class="1">
-              <div class="piece rook p2" index="2"><img src="rookarrow.JPG" alt=""></div>
-            </td>
-            <td class="2">
-              <div class="piece king p2" index="1"><img src="king.JPG" alt=""></div>
-            </td>
-            <td class="3">
-              <div class="piece diagonal p2" index="0"><img src="diagonal.JPG" alt=""></div>
-            </td>
-          </tr>
-          <tr>
-            <td class="4"></td>
-            <td class="5">
-              <div class="piece pawn p2" index="3" mult="1"><img src="pawn.JPG" alt=""></div>
-            </td>
-            <td class="6"></td>
-          </tr>
-          <tr>
-            <td class="7"></td>
-            <td class="8">
-              <div class="piece p1 pawn" index="3" mult="-1"><img src="pawn.JPG" alt=""></div>
-            </td>
-            <td class="9"></td>
-          </tr>
-          <tr>
-            <td class="a">
-              <div class="piece p1 diagonal" index="0"><img src="diagonal.JPG" alt=""></div>
-            </td>
-            <td class="b">
-              <div class="piece p1 king" index="1"><img src="king.JPG" alt=""></div>
-            </td>
-            <td class="c">
-              <div class="piece p1 rook" index="2"><img src="rookarrow.JPG" alt=""></div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-5">
-      <div class="row">
-        <div class="col-6">
-          <div class='player1Pos'>
-            <div class="row text-center justify-content-center" style="margin-top: 1rem;">
-              Player 1 Possession
-            </div>
-            <div class="row">
-              <table class="subtable">
-                <tr>
+        <div class="col-12 col-sm-5">
+          <div class="row justify-content-center">
+            <table class="square main" border="1" width="500">
+              <tr>
+                <td class="1">
+                  <div class="piece rook p2" index="2"><img src="rookarrow.JPG" alt=""></div>
+                </td>
+                <td class="2">
+                  <div class="piece king p2" index="1"><img src="king.JPG" alt=""></div>
+                </td>
+                <td class="3">
+                  <div class="piece diagonal p2" index="0"><img src="diagonal.JPG" alt=""></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="4"></td>
+                <td class="5">
+                  <div class="piece pawn p2" index="3" mult="1"><img src="pawn.JPG" alt=""></div>
+                </td>
+                <td class="6"></td>
+              </tr>
+              <tr>
+                <td class="7"></td>
+                <td class="8">
+                  <div class="piece p1 pawn" index="3" mult="-1"><img src="pawn.JPG" alt=""></div>
+                </td>
+                <td class="9"></td>
+              </tr>
+              <tr>
+                <td class="a">
+                  <div class="piece p1 diagonal" index="0"><img src="diagonal.JPG" alt=""></div>
+                </td>
+                <td class="b">
+                  <div class="piece p1 king" index="1"><img src="king.JPG" alt=""></div>
+                </td>
+                <td class="c">
+                  <div class="piece p1 rook" index="2"><img src="rookarrow.JPG" alt=""></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-5">
+          <div class="row">
+            <div class="col-6">
+              <div class='player1Pos'>
+                <div class="row text-center justify-content-center" style="margin-top: 1rem;">
+                  Player 1 Possession
+                </div>
+                <div class="row">
+                  <table class="subtable">
+                    <tr>
 
-                </tr>
-              </table>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class='player2Pos'>
+                <div class="row text-center justify-content-center" style="margin-top: 1rem;">
+                  Player 2 Possession
+                </div>
+                <div class="row">
+                  <table class="subtable">
+                    <tr>
+
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class='player2Pos'>
-            <div class="row text-center justify-content-center" style="margin-top: 1rem;">
-              Player 2 Possession
-            </div>
-            <div class="row">
-              <table class="subtable">
-                <tr>
+      </div>
+      <div class="cover success" id="fullscreen" style="display: none;">
+        <div class="cover-image"></div>
+        <div class="container">
+          <div class="row-justify-content align-items-center text-center" style="height: 100%;">
+            <div class="col-12">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
 
-                </tr>
-              </table>
+              <h1>
+                Congrats on the win!!
+              </h1>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="cover success" id="fullscreen" style="display: none;">
-    <div class="cover-image"></div>
-    <div class="container">
-      <div class="row-justify-content align-items-center text-center" style="height: 100%;">
-        <div class="col-12">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-
-          <h1>
-            Congrats on the win!!
-          </h1>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src='index.js'>
-  </script>
+      <script src='index.js'>
+      </script>
 </body>
 
 </html>
