@@ -85,16 +85,28 @@ function dropTD(info, event, elem, player) {
     alert('Hey, hey, hYEYYE. Illegal move')
     return false
   }
+  setTimeout(() => {
+    var kingLen = document.querySelectorAll(`table.main .king`).length
+    console.log(kingLen)
+    if (kingLen < 2) {
+      document.querySelector('#fullscreen').style.display = 'block'
+      const audio = new Audio('song.mp3')
+      audio.play()
+      // location.reload()
+    }
+  }, 500)
   try {
+    const tr = document.createElement('tr')
     const td = document.createElement('td')
     td.classList.add('f')
     if (elem.innerHTML.length > 2) {
       elem.children[0].classList.remove(player)
       elem.children[0].classList.add(oppPlayer)
       td.innerHTML = elem.innerHTML
+      tr.append(td)
       const posClass = oppPlayer !== 'p1' ? 'player1Pos' : 'player2Pos'
       console.log(posClass)
-      document.querySelector(`.${posClass} table tr`).append(td)
+      document.querySelector(`.${posClass} table tr`).append(tr)
     }
   } catch (e) {
 
@@ -130,6 +142,7 @@ function drop(info, event, elem, player) {
 
   let hoverParentNumb = parseInt(elem.parentElement.getAttribute('class') ||
     elem.parentElement.getAttribute('class')[0], 16)
+  console.log(document.querySelector(`table.main .king`))
 
   if (!isLegalMove(appender.getAttribute('index'), {
       x: (appenderParentNumb - 1) % 3,
@@ -140,21 +153,22 @@ function drop(info, event, elem, player) {
     }, {
       pawnMult: oppPlayer === 'p2' ? -1 : 1
     }) && appenderParentNumb !== 15) {
-    alert('ILLEGAL MOVe')
     return false
   }
   playerMove = oppPlayer
   moveDropped = true
 
+  const tr = document.createElement('tr')
   const td = document.createElement('td')
   td.classList.add('f')
   elem.classList.remove(player)
   elem.classList.add(oppPlayer)
   td.innerHTML = elem.outerHTML
+  tr.append(td)
   const posClass = oppPlayer !== 'p1' ? 'player1Pos' : 'player2Pos'
   console.log(posClass)
 
-  document.querySelector(`.${posClass} table tr`).append(td)
+  document.querySelector(`.${posClass} table tr`).append(tr)
   elem.outerHTML = appender.outerHTML
   // elem.appendChild(appender)
   elem.removeEventListener('drop', () => {
