@@ -73,6 +73,15 @@ function dropTD(info, event, elem, player) {
 
   console.log("hoverParentNumb", hoverParentNumb)
 
+  setTimeout(() => {
+    var kingLen = document.querySelectorAll(`table.main .king`).length
+    console.log(kingLen)
+    if (kingLen < 2) {
+      document.querySelector('#fullscreen').style.display = 'block'
+      const audio = new Audio('song.mp3')
+      audio.play()
+    }
+  }, 500)
   if (!isLegalMove(appender.getAttribute('index'), {
       x: (appenderParentNumb - 1) % 3,
       y: parseInt((appenderParentNumb - 1) / 3)
@@ -82,19 +91,9 @@ function dropTD(info, event, elem, player) {
     }, {
       pawnMult: oppPlayer === 'p2' ? -1 : 1
     }) && appenderParentNumb !== 15) {
-    alert('Hey, hey, hYEYYE. Illegal move')
+    // alert('Hey bud, there is some risky business going on here')
     return false
   }
-  setTimeout(() => {
-    var kingLen = document.querySelectorAll(`table.main .king`).length
-    console.log(kingLen)
-    if (kingLen < 2) {
-      document.querySelector('#fullscreen').style.display = 'block'
-      const audio = new Audio('song.mp3')
-      audio.play()
-      // location.reload()
-    }
-  }, 500)
   try {
     const tr = document.createElement('tr')
     const td = document.createElement('td')
